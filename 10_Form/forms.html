@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Forms</title>
+  <!--css style-->
+  <style>
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+    }
+
+    div {
+      padding: 20px;
+    }
+
+    div>div {
+      width: 500px;
+      background-color: #fff;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 3px 1px 11px 5px rgba(51, 57, 56, 0.57);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Cleverland</h1>
+    <div>
+      <form name="mainForm">
+        <h3>Новые элементы input HTML 5</h3>
+        <p>
+          <span>
+            <label for="colorSelect">Выберите нужный цвет фона</label>
+            <input id="colorSelect" type="color" value="#99AABB" name="bg-color">
+          </span>
+        </p>
+        <h3>Ввод чисел</h3>
+        <p>
+          <label>
+            Введите число
+            <input name="myLuckyNumber" type="number" value="50" max="100" min="0" step="5">
+          </label>
+        </p>
+        <p>
+          <label>
+            Выберите число
+            <input id="number" oninput="onchangeNumber()" type="range" min="0" max="100" step="1" value="50">
+            <span id="getNUmber"></span>
+          </label>
+        </p>
+        <p>Размер рисунка:
+          <input type="range" min="1" max="8" id="size" oninput="sizePic()" value="2">
+        </p>
+        <p>
+          <img align="center" src="wtf.jfif" alt="wtf" id="pic">
+        </p>
+        <h3>Поиск</h3>
+        <p>
+          <input type="search" name="my_search" placeholder="Поиск по сайту">
+          <input type="button" value="Поехали">
+        </p>
+        <h3>Ввод даты</h3>
+        <p>
+          <label>
+            Выберите дату: <input type="date" name="calendar" min="2020-10-01" max="2021-01-01">
+          </label>
+          <p><input type="month"></p>
+          <p><input type="week"></p>
+          <h3>Ввод точного времени</h3>
+          <p><input type="time" name="cron" value="03:15" min="00:01" max="06:00"></p>
+          <p><input type="datetime-local" name="created"></p>
+          <p>
+            <input type="reset" value="Сбросить?">
+            <input type="submit" value="Отправить!">
+          </p>
+      </form>
+    </div>
+  </div>
+  <div style="position:relative;overflow:hidden;"><a
+      href="https://yandex.com/maps/10276/orsha/?utm_medium=mapframe&utm_source=maps"
+      style="color:#eee;font-size:12px;position:absolute;top:0px;">Orsha</a><a
+      href="https://yandex.com/maps/10276/orsha/?ll=30.411358%2C54.506565&utm_medium=mapframe&utm_source=maps&z=13.22"
+      style="color:#eee;font-size:12px;position:absolute;top:14px;">Yandex.Maps: search for places, addresses, and
+      public transport</a><iframe src="https://yandex.com/map-widget/v1/-/CCUAfPXODA" width="560" height="400"
+      frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+
+
+
+
+  <!-- JS scripts-->
+  <script>
+    let colorEl = document.getElementById("colorSelect");
+    let changeColor = () => {
+      let containerEl = document.getElementById("container");
+      let color = colorEl.value
+      containerEl.style.background = color;
+    }
+    colorEl.addEventListener("change", changeColor)
+
+    function onchangeNumber() {
+      number = document.getElementById("number").value;
+      getNUmber = document.getElementById("getNUmber");
+      getNUmber.innerHTML = number;
+    }
+
+    function sizePic() {
+      size = document.getElementById("size").value;
+      img = document.getElementById("pic");
+      img.width = 60 + 20 * size;
+    }
+  </script>
+</body>
+
+</html>

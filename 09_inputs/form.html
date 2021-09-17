@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Формы</title>
+  <style>
+    h1 {
+      font-size: 50px;
+      color: #6E76F1;
+    }
+
+    div {
+      margin: 0 auto;
+    }
+
+    .form-container {
+      width: 400px;
+      padding: 20px;
+    }
+
+    .required {
+      position: relative;
+    }
+
+    .required::before {
+      position: absolute;
+      content: '*';
+      color: red;
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 align="center">Cleverland</h1>
+  <h2 align="center">Формы. Элементы форм</h2>
+  <div class="form-container">
+    <form name="user-form" action="send.php" autocomplete="off" enctype="multipart/form-data" method="post">
+      <fieldset>
+        <legend>Данные пользователя</legend>
+        <p> Логин:
+          <input type="text">
+        </p>
+        <p> Пароль:
+          <input type="password">
+        </p>
+        <p>
+          <input type="submit" value="Вход">
+        </p>
+      </fieldset>
+    </form>
+  </div>
+  <!----------------------------------------->
+  <div class="form-container">
+    <form name="user-form-2" action="send.php" enctype="text/plain">
+      <fieldset>
+        <legend>Пожелания</legend>
+        <p>
+          <select size="1" name="city">
+            <option disabled>Выберите город</option>
+            <option value="Orsha">Орша</option>
+            <option selected value="Vitebsk">Витебск</option>
+            <option value="Minsk">Минск</option>
+            <option value="Moscow">Москва</option>
+          </select>
+        </p>
+        <p>
+          <select size="4" multiple name="dreams">
+            <option disabled>Выберете что бы вы хотели иметь</option>
+            <option value="car">Машина</option>
+            <option value="house">Свой дом</option>
+            <option value="flat">Квартира</option>
+            <option selected value="garden">Сад</option>
+            <option value="ten-children">10 детей</option>
+            <option value="whife">Жена</option>
+          </select>
+        </p>
+        <p>
+          <label for="hey">Просите что хотите</label>
+          <input id="hey" type="text" name="personal">
+        </p>
+        <p>
+          <textarea name="aboutMe" id="resume" cols="50" rows="10"></textarea>
+        </p>
+        <p>
+          <input type="submit" value="Отправить">
+        </p>
+      </fieldset>
+    </form>
+  </div>
+  <!-- 2 УРОК------------------>
+  <div class="form-container">
+    <form action="">
+      <fieldset>
+        <legend>Форма для ввода данных</legend>
+        <div>
+          <input type="text" size="30" placeholder="Ваше Имя" maxlength="10" required>
+          <p>
+            <input type="password" size="30" placeholder="Пароль" required>
+          </p>
+          <label>
+            <input type="checkbox" name="isRemember" checked value="remember">
+            Запомнить меня
+          </label>
+          <p>
+            <p>
+              <label for="my-pet">Ваше любимое животное</label>
+              <input type="text" list="my-pet">
+              <datalist id="my-pet">
+                <option value="Кот">
+                <option value="Хомяк">
+                <option value="Собака">
+              </datalist>
+            </p>
+            <p>
+              Номер телефона
+              <input type="tel" name="tel" pattern="2[0-9]{3}-[0-9] {3}">
+            </p>
+            <p>
+              Ваш сайт
+              <input type="url" placeholder="Сайт" name="site" required></p>
+            <label>
+              <input type="radio" name="radio">
+              Подписаться на рассылку спама
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="radio" name="radio">
+              Получать обновления
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="radio" name="radio" checked>
+              Пsdfsdfsdf
+            </label>
+          </p>
+          <input type="hidden" value="скрытое поле">
+          <input type="file" accept=".jpg, .doc" multiple>
+          <p>
+            <input type="image" src="imgbutton.gif" alt="logo">
+          </p>
+          <p>
+            <input type="reset" value="Очsdfdsfsdf">
+            <input type="submit" value="Сохранить">
+          </p>
+          <input type="button" value="просто кнопка">
+        </div>
+      </fieldset>
+    </form>
+    <form action="">
+      <fieldset>
+        <legend>Еще форма</legend>
+        <p>
+          <button type="button">
+            <img src="logo.jpg" alt="" style="vertical-align:middle">
+            Кнопка с рисунком
+          </button>
+        </p>
+
+        </p>
+      </fieldset>
+    </form>
+  </div>
+  <div>
+
+    <form name="user">
+      <fieldset>
+        <legend>
+          Регистрационная форма пользователя
+        </legend>
+        <p>
+          <label>
+            Имя:
+            <input type="text" name="userName">
+          </label>
+        </p>
+        <p>
+          <label for="age">Укажите возраст:</label>
+          <select name="age" id="age">
+            <option disabled selected>Выберите возраст</option>
+            <option value="10-15">10-15</option>
+            <option value="15-20">15-20</option>
+            <option value="20-30">20-30</option>
+            <option value="30-40">30-40</option>
+            <option value="40+">Старше 40</option>
+          </select>
+        </p>
+        <p>
+          Укажите пол:
+          <label>
+            Мужской
+            <input type="radio" name="sex" value="male">
+          </label>
+          <label>
+            Женский
+            <input type="radio" name="sex" value="female">
+          </label>
+        </p>
+        <p>
+          <label>Страна проживания</label>
+          <select name="country">
+            <option value="belarus">Беларусь</option>
+            <option value="russia">РФ</option>
+            <option value="usa">usa</option>
+          </select>
+        </p>
+        <p>
+          Владение языками:
+          <label>
+            Русский
+            <input type="checkbox" name="language" value="ru">
+          </label>
+          <label>
+            Белорусский
+            <input type="checkbox" name="language" value="bel">
+          </label>
+          <label>
+            Английский
+            <input type="checkbox" name="language" value="en">
+          </label>
+        </p>
+        <p>
+          <label>
+            Фото профиля:
+            <input type="file" accept=".jpg .png">
+          </label>
+        </p>
+        <p>
+          <label class="required">
+            Введите логин:
+            <input type="text" maxlength="15" required>
+          </label>
+        </p>
+        <p>
+          <label>
+            Введите пароль:
+            <input type="password" required>
+          </label>
+        </p>
+        <p>
+          <label>
+            Повторите пароль:
+            <input type="password" required>
+          </label>
+        </p>
+        <p>
+          <textarea cols="30" rows="10">
+
+          </textarea>
+        </p>
+      </fieldset>
+      <p>
+        <input type="reset">
+        <input type="submit">
+      </p>
+    </form>
+
+    https://html5book.ru/html5-forms/
+
+
+  </div>
+
+
+
+
+
+
+</body>
+
+</html>

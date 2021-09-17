@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таблицы HTML</title>
+  <style>
+    .title {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .content-wrapper {
+      width: 50vw;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="title">Таблицы HTML</h1>
+  <div class="content-wrapper">
+    <table width="100%" cellspacing="0" border="1" style="text-align:center">
+      <caption>Описание содержимого таблицы</caption>
+      <tr>
+        <th># п/п</th>
+        <th>Продукт</th>
+        <th>Описание</th>
+        <th>шт</th>
+        <th>Цена за шт</th>
+        <th>Общая цена</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Яблоки</td>
+        <td>Зеленые</td>
+        <td>10</td>
+        <td>2р</td>
+        <td>20р</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Апельсины</td>
+        <td>Крупные</td>
+        <td>10</td>
+        <td>2р</td>
+        <td>20р</td>
+      </tr>
+      <tr>
+        <td colspan="3"> 3 Мандарины мелкие - ящик</td>
+        <td>10</td>
+        <td>2р</td>
+        <td>20р</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td rowspan="2">Виноград</td>
+        <td>Белый</td>
+        <td>12</td>
+        <td>2р</td>
+        <td>24р</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Синий</td>
+        <td>12</td>
+        <td>2р</td>
+        <td>24р</td>
+      </tr>
+    </table>
+    <hr>
+    <table>
+      <caption>Таблицы покупок</caption>
+      <thead>
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Первый</td>
+          <td>Второй</td>
+          <td>Третий</td>
+          <td>Четвертый</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Первый</td>
+          <td>Второй</td>
+          <td>Третий</td>
+          <td>Четвертый</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+
+</body>
+
+</html>

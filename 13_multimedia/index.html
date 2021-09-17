@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+
+    header {
+      text-align: center;
+      background: rgb(167, 163, 163);
+    }
+
+    main {
+      display: flex;
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    nav {
+      width: 20%;
+      margin-right: 40px;
+      background: rgb(167, 163, 163);
+    }
+
+    section {
+      width: 80%;
+    }
+
+    section span {
+      vertical-align: top;
+      line-height: 25px;
+      margin-right: 20px;
+    }
+
+    .video-container {
+      margin-top: 20px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-around;
+      text-align: right;
+      background: rgb(167, 163, 163);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>
+      Мультимедиа элементы
+    </h1>
+  </header>
+  <main>
+    <nav>
+      <ul>
+        <li><a href="#">Ссылка</a></li>
+        <li><a href="#">Ссылка</a></li>
+        <li><a href="#">Ссылка</a></li>
+        <li><a href="#">Ссылка</a></li>
+      </ul>
+    </nav>
+    <section>
+      <div>
+        <span>Playing Space - Laser Dance</span>
+        <audio id="item-1" src="Playing Space - Laser Dance.mp3" controls>
+          Ваш браузер не потдерживает данный формат
+        </audio>
+      </div>
+      <div class="video-container">
+        <video src="kot.mp4" controls width="600px" poster="kot.jpg">
+          <source src="video.mp4" type="video/mp4">
+          <track>
+        </video>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>
+      <p>Дополнительная информация</p>
+      <p>Дополнительная информация</p>
+    </div>
+    <div>
+      <p>SITE FOOTER 2020</p>
+    </div>
+  </footer>
+</body>
+
+</html>

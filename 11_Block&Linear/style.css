@@ -1,0 +1,84 @@
+.body {
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.header {
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(79, 81, 112);
+  border-radius: 10px;
+}
+
+.link-group a {
+  display: inline-block;
+  width: 200px;
+  height: 35px;
+  font-size: 25px;
+  text-decoration: none;
+  padding: 5px;
+  margin-right: 10px;
+  text-align: center;
+  color: #000;
+  background-color: rgb(147, 168, 161);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.link-group a:hover {
+  color: rgb(87, 83, 83);
+}
+
+
+.content {
+  width: 100%;
+  background: rgb(99, 90, 218);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.content .block {
+  padding: 5px;
+  margin: 10px 0;
+  background: rgb(160, 111, 96);
+}
+
+.content .block p {
+  font-size: 22px;
+  background: rgb(90, 155, 138);
+}
+
+.content .block span {
+  font-size: 22px;
+  background: rgb(155, 90, 138);
+}
+
+.block ul {
+  background: rgb(106, 155, 93);
+  
+}
+
+.footer {
+  height: 100px;
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(79, 81, 112);
+  border-radius: 10px;
+}
+
+.footer span {
+  font-size: 25px;
+  color: #FFF;
+}
