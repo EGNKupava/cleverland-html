@@ -103,11 +103,15 @@
             <input type="checkbox" name="isRemember" checked value="remember">
             Запомнить меня
           </label>
+          <label>
+            <input type="checkbox" name="isAgree" checked value="agree">
+            Ознакомился с соглашением
+          </label>
           <p>
             <p>
               <label for="my-pet">Ваше любимое животное</label>
               <input type="text" list="my-pet">
-              <datalist id="my-pet">
+              <datalist id="my-pet" name="my-pet">
                 <option value="Кот">
                 <option value="Хомяк">
                 <option value="Собака">
@@ -115,11 +119,11 @@
             </p>
             <p>
               Номер телефона
-              <input type="tel" name="tel" pattern="2[0-9]{3}-[0-9] {3}">
+              <input type="tel" name="tel" pattern="[+]{1}[0-9]{3}-[0-9]{3}-[0-9]{4}"">
             </p>
             <p>
               Ваш сайт
-              <input type="url" placeholder="Сайт" name="site" required></p>
+              <input type=" url" placeholder="Сайт" name="site" required></p>
             <label>
               <input type="radio" name="radio">
               Подписаться на рассылку спама
@@ -134,10 +138,10 @@
           <p>
             <label>
               <input type="radio" name="radio" checked>
-              Пsdfsdfsdf
+              Не получать
             </label>
           </p>
-          <input type="hidden" value="скрытое поле">
+          <input type="hidden" name="hidden" value="скрытое поле">
           <input type="file" accept=".jpg, .doc" multiple>
           <p>
             <input type="image" src="imgbutton.gif" alt="logo">
@@ -147,6 +151,7 @@
             <input type="submit" value="Сохранить">
           </p>
           <input type="button" value="просто кнопка">
+          <button type="button"></button>
         </div>
       </fieldset>
     </form>
@@ -158,8 +163,6 @@
             <img src="logo.jpg" alt="" style="vertical-align:middle">
             Кнопка с рисунком
           </button>
-        </p>
-
         </p>
       </fieldset>
     </form>
@@ -174,7 +177,7 @@
         <p>
           <label>
             Имя:
-            <input type="text" name="userName">
+            <input type="text" name="userName" required>
           </label>
         </p>
         <p>
@@ -237,13 +240,13 @@
         <p>
           <label>
             Введите пароль:
-            <input type="password" required>
+            <input type="password" name="password" required>
           </label>
         </p>
         <p>
           <label>
             Повторите пароль:
-            <input type="password" required>
+            <input type="password" name="password-repeat" required>
           </label>
         </p>
         <p>
@@ -253,21 +256,13 @@
         </p>
       </fieldset>
       <p>
-        <input type="reset">
+        <input type="reset" value="Сброс">
         <input type="submit">
       </p>
     </form>
 
     https://html5book.ru/html5-forms/
-
-
   </div>
-
-
-
-
-
-
 </body>
 
 </html>

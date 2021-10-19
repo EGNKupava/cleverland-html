@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>list</title>
   <style>
     body {
       padding: 20px;
@@ -19,11 +19,11 @@
 <body>
   <h1 align="center">CLEVERLAND</h1>
   <div>
-    <ul type="circle">
+    <!-- type= disc | circle | square -->
+    <ul type="square">
       <li><a href="index.html">Главная</a></li>
       <li><a href="kettle.html">Чайник</a></li>
       <li><a href="pot.html">Кастрюля</a></li>
-      <li><a href="xbox.html">Xbox one</a></li>
       <li><a href="xbox.html">Xbox one</a></li>
     </ul>
   </div>
@@ -46,10 +46,11 @@
       </ul>
     </div>
     <hr>
-    <!-- Атрибуты start reversed type-->
+    <!-- Атрибуты start & reversed & type-->
+    <!-- type="A | a | I | i | 1 -->
     <div>
       <h2>Нумерованный список ol</h2>
-      <ol>
+      <ol type="A" start="10">
         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, consectetur!</li>
         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, consectetur!</li>
         <li>Вложенный список
@@ -65,7 +66,7 @@
       </ol>
     </div>
     <hr>
-    <!--description list-->
+    <!--dl - description list-->
     <div>
       <h2>Список описаний</h2>
       <dl>
